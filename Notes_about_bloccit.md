@@ -4,4 +4,4 @@
 ExecJS::RuntimeUnavailable in Welcome#about
 
 ```
-3. 
+3.
