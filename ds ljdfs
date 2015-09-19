@@ -1,0 +1,20 @@
+total 46608
+drwxrwxr-x  8 aleksandar aleksandar     4096 Sep 13 14:10 app
+drwxr-xr-x  2 aleksandar aleksandar     4096 Sep 13 14:10 bin
+drwxrwxr-x  5 aleksandar aleksandar     4096 Sep 15 19:54 config
+-rw-rw-r--  1 aleksandar aleksandar      153 Sep 13 14:10 config.ru
+drwxrwxr-x  2 aleksandar aleksandar     4096 Sep 15 19:38 db
+-rw-rw-r--  1 aleksandar aleksandar      741 Sep 16 22:21 Gemfile
+-rw-rw-r--  1 aleksandar aleksandar     4174 Sep 16 22:08 Gemfile.lock
+drwxrwxr-x 13 aleksandar aleksandar     4096 Sep 14 21:05 generate
+-rw-rw-r--  1 aleksandar aleksandar 47646372 Sep 16 22:08 google-chrome-stable_current_i386.deb
+drwxrwxr-x  4 aleksandar aleksandar     4096 Sep 13 14:10 lib
+drwxrwxr-x  2 aleksandar aleksandar     4096 Sep 14 20:51 log
+-rw-rw-r--  1 aleksandar aleksandar      358 Sep 17 22:16 Notes_about_bloccit.md
+drwxrwxr-x  2 aleksandar aleksandar     4096 Sep 13 14:10 public
+-rw-rw-r--  1 aleksandar aleksandar      249 Sep 13 15:46 Rakefile
+-rw-rw-r--  1 aleksandar aleksandar      611 Sep 13 15:46 README.md
+drwxrwxr-x 13 aleksandar aleksandar     4096 Sep 14 21:05 s
+drwxrwxr-x  3 aleksandar aleksandar     4096 Sep 14 21:05 spec
+drwxrwxr-x  6 aleksandar aleksandar     4096 Sep 13 14:23 tmp
+drwxrwxr-x  3 aleksandar aleksandar     4096 Sep 13 14:10 vendor
