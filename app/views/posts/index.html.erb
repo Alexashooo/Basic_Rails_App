@@ -4,7 +4,7 @@
   <div class="media">
     <div class="media-body">
       <h4 class="media-heading">
-        <% if index%5==0 %>
+        <% if (index+1)%5==0 && index!=0 %>
         <% post.title = "CENSORED" %>
         <% end %>
         <%= link_to post.title, post %>
