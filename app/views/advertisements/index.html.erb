@@ -1,0 +1,18 @@
+<h1>Advertisements</h1>
+
+<% @advertisements.each do |advertisement| %>
+<div class="media">
+  <div class="media-body">
+    <h4 class="media-heading">
+      <%if advertisement.copy[0..2]== "www" || advertisement.copy[0..2]== "htt"%>
+                  <%= link_to advertisement.title, advertisement.copy %>
+
+          <%else%>
+             <%= link_to advertisement.title, advertisement%>
+
+     <%end%>
+   </h4>
+
+  </div>
+</div>
+<%end%>

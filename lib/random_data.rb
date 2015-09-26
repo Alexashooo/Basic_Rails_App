@@ -26,4 +26,10 @@ module RandomData
     letters.shuffle!
     letters[0,rand(3..8)].join
   end
+
+  def random_number
+    numbers = [0,1,2,3,4,5,6,7,8,9]
+    numbers.shuffle!
+    price=numbers[0..4].join
+  end
 end
