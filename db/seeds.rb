@@ -1,5 +1,6 @@
-include RandomData
 
+include RandomData
+=begin
 # Create Posts
 50.times do
 # #1
@@ -24,3 +25,15 @@ end
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
+=end
+50.times do
+# #1
+  Advertisement.create!(
+    title:  RandomData.random_sentence,
+    copy:   RandomData.random_sentence,
+    price:  RandomData.random_number
+    )
+end
+
+puts "Advertisement seeding is finished"
+puts "#{Advertisement.count} advertisements created"
