@@ -40,9 +40,8 @@ puts "#{Comment.count} comments created"
 # #1
   SponsoredPost.create!(
 # #2
-    topic:  topics.sample,
     title:  RandomData.random_sentence,
-    body:   RandomData.random_paragraph
-    price:
+    body:   RandomData.random_paragraph,
+    price:  RandomData.random_number
   )
 end
