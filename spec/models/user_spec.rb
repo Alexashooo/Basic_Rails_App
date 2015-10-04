@@ -7,11 +7,13 @@ it { should validate_presence_of(:name) }
 it { should validate_length_of(:name).is_at_least(1) }
 
 
+
 it { should validate_presence_of(:email) }
 it { should validate_uniqueness_of(:email) }
 it { should validate_length_of(:email).is_at_least(3) }
 it { should allow_value("user@bloccit.com").for(:email) }
 it { should_not allow_value("userbloccit.com").for(:email) }
+
 
 
 it { should validate_presence_of(:password) }
@@ -30,11 +32,21 @@ end
 
 describe "invalid user" do
      let(:user_with_invalid_name) { User.new(name: "", email: "user@bloccit.com") }
+     let(:user_with_invalid_name2) { User.new(name: "Alex sunjic", email: "user@bloccit.com") }
+     let(:user_with_invalid_name3) { User.new(name: "alex Sunjic", email: "user@bloccit.com") }
      let(:user_with_invalid_email) { User.new(name: "Bloccit User", email: "") }
      let(:user_with_invalid_email_format) { User.new(name: "Bloccit User", email: "invalid_format") }
 
      it "should be an invalid user due to blank name" do
        expect(user_with_invalid_name).to_not be_valid
+     end
+
+     it "should be an invalid user due to blank name" do
+       expect(user_with_invalid_name2).to_not be_valid
+     end
+
+     it "should be an invalid user due to blank name" do
+       expect(user_with_invalid_name3).to_not be_valid
      end
 
      it "should be an invalid user due to blank email" do

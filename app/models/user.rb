@@ -1,5 +1,16 @@
 class User < ActiveRecord::Base
-  before_save { self.email = email.downcase }
+  before_save {
+    self.email = email.downcase
+
+    devided_name = []
+    devided_name=self.name.split
+
+    devided_name.each do |name_part|
+        name_part.capitalize!
+    end
+
+    self.name = devided_name.join(" ")
+ }
 
 
   EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
