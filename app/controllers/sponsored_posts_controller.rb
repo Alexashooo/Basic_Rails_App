@@ -1,6 +1,6 @@
 class SponsoredPostsController < ApplicationController
   def show
-    @sponsored_post=SponsoredPost.find(params [:id])
+    @sponsored_post=SponsoredPost.find(params[:id])
   end
 
   def new
@@ -9,7 +9,7 @@ class SponsoredPostsController < ApplicationController
   end
 
   def edit
-    @sponsored_post=SponsoredPost.find(params [:id])
+    @sponsored_post=SponsoredPost.find(params[:id])
   end
 
   def create
@@ -17,6 +17,7 @@ class SponsoredPostsController < ApplicationController
     @sponsored_post = SponsoredPost.new
     @sponsored_post.title = params[:sponsored_post][:title]
     @sponsored_post.body = params[:sponsored_post][:body]
+    @sponsored_post.price= params[:sponsored_post][:price]
     @topic = Topic.find(params[:topic_id])
 
     @sponsored_post.topic = @topic
@@ -31,11 +32,12 @@ class SponsoredPostsController < ApplicationController
       render :new
     end
   end
-=begin
+
   def update
     @sponsored_post = SponsoredPost.find(params[:id])
     @sponsored_post.title = params[:sponsored_post][:title]
     @sponsored_post.body = params[:sponsored_post][:body]
+    @sponsored_post.price= params[:sponsored_post][:price]
 
     if @sponsored_post.save
       flash[:notice] = "Post was updated."
@@ -57,7 +59,4 @@ class SponsoredPostsController < ApplicationController
         render :show
       end
   end
-=end
-
-
 end

@@ -8,8 +8,6 @@ require 'rails_helper'
    let(:my_post) { my_topic.posts.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph) }
 
 
-
-
    describe "GET show" do
         it "returns http success" do
     # #16
