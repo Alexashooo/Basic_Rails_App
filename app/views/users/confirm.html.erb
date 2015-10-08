@@ -1,8 +1,8 @@
 <h1>Sign Up Confirmation</h1>
 
 <h2>Are you sure these values are correct?</h2>
-<p>Email: #{@user.email}</p>
-<p>Name: #{@user.name}</p>
+<p>Email: <%"#{@user.email}"%></p>
+<p>Name: <%"#{@user.name}"%></p>
 
  <div class="row">
    <div class="col-md-8">
@@ -11,11 +11,9 @@
        <div class="form-group">
          <%= button_to "Yes", {:controller => "users", :action => "create", :params => params}, class: 'btn btn-success' %>
        </div>
+
        <div class="form-group">
          <%= f.submit "No", class: 'btn btn-success' %>
-         <%#check this!!!!!!!!!%>
-         <%= render partial: 'form', locals: { user: @user.topic   } %>
-
        </div>
      <% end %>
    </div>
