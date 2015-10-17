@@ -1,8 +1,9 @@
 class Label < ActiveRecord::Base
 
-  has_many :labelings
+   has_many :labelings
+   belongs_to :labelable, polymorphic: true
 
-  belongs_to :labelable, polymorphic: true
+
 
   def self.update_labels(label_string)
      new_labels = []
@@ -18,7 +19,4 @@ class Label < ActiveRecord::Base
      new_labels
    end
 
-  has_many :topics, through: :labelings, source: :labelable, source_type: :Topic
-
-  has_many :posts, through: :labelings, source: :labelable, source_type: :Post
 end
