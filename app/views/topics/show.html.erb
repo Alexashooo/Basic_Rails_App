@@ -28,11 +28,10 @@
            submitted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %> <br>
            <%= post.comments.count %> Comments
          </small>
-       </div>
+       </div>%>
      <% end %>
    </div>
    <div class="col-md-4">
-
      <%= link_to "Delete Topic", @topic, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this topic?' } %>
    </div>
 
