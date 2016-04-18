@@ -1,24 +1,26 @@
 class Label < ActiveRecord::Base
 
+<<<<<<< HEAD
    has_many :labelings
    belongs_to :labelable, polymorphic: true
    has_many :topics, through: :labelings, source: :labelable, source_type: :Topic
    has_many :posts, through: :labelings, source: :labelable, source_type: :Post
 
 
+=======
+  has_many :labelings
+  has_many :topics, through: :labelings, source: :labelable, source_type: :Topic
+  has_many :posts, through: :labelings, source: :labelable, source_type: :Post
+>>>>>>> Labels_checkout
 
   def self.update_labels(label_string)
-     new_labels = []
+ # #24
+     return Label.none if label_string.blank?
 
-     unless label_string.nil? || label_string.empty?
-
-       label_string.split(",").each do |label|
-       label_name = label.strip
-       new_label = Label.find_or_create_by(name: label_name)
-       new_labels << new_label
-       end
+ # #25
+     label_string.split(",").map do |label|
+       Label.find_or_create_by(name: label.strip)
      end
-     new_labels
    end
 
 end

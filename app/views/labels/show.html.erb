@@ -4,13 +4,21 @@
 
     <% @label.topics.each do |topic| %>
       <div>
+<<<<<<< HEAD
         Topic: <%=link_to topic.name, topic%>
+=======
+        Topic: <%= link_to topic.name, topic %>
+>>>>>>> Labels_checkout
       </div>
     <% end %>
 
     <% @label.posts.each do |post| %>
       <div>
+<<<<<<< HEAD
         Post: <%=link_to post.title, topic_post_path(post.topic, post)%>
+=======
+        Post: <%= link_to post.title, topic_post_path(post.topic, post) %>
+>>>>>>> Labels_checkout
       </div>
     <% end %>
   </div>
