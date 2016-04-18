@@ -4,12 +4,12 @@
 
     <% @label.topics.each do |topic| %>
       <div>
-        Topic: <%= link_to topic.name, topic%>
+        Topic: <%= link_to topic.name, topic %>
       </div>
     <% end %>
 
     <% @label.posts.each do |post| %>
-       <div>
+      <div>
         Post: <%= link_to post.title, topic_post_path(post.topic, post) %>
       </div>
     <% end %>
