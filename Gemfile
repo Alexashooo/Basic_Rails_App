@@ -35,3 +35,5 @@ source 'https://rubygems.org'
 
  # Used for encrypting User passwords
 gem 'bcrypt'
+
+ gem 'factory_girl_rails', '~> 4.0'

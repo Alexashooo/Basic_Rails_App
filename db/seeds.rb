@@ -1,4 +1,4 @@
-include RandomData
+require 'random_data'
 
 # Create Users
 5.times do

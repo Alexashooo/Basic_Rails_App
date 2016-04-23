@@ -1,26 +1,26 @@
 module RandomData
 
   def random_name
-    first_name = random_word.capitalize
-    last_name = random_word.capitalize
+    first_name = self.random_word.capitalize
+    last_name = self.random_word.capitalize
     "#{first_name} #{last_name}"
   end
 
   def random_email
     "#{random_word}@#{random_word}.#{random_word}"
   end
-  
+
 # #6
   def random_paragraph
     sentences = []
     rand(4..6).times do
-      sentences << random_sentence
+      sentences << self.random_sentence
     end
 
     sentences.join(" ")
   end
 
-# #7
+
   def random_sentence
     strings = []
     rand(3..8).times do
