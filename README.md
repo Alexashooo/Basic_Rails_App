@@ -1,5 +1,4 @@
-<snippet>
-  <content>
+
 # Bloccit
 Bloccit is an application which is part of Bloc curriculum for Rails web development. It is similar to Reddit, where users can post, share, vote on and save links and comments. The application has many elements of modern web development and it is made with production level quality.
 
@@ -20,10 +19,3 @@ If you do not have Bundler installed, please run:
 ```
 gem install bundler
 ```
-
-
-
-
-  </content>
-
-</snippet>
